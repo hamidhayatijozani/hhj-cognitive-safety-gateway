@@ -1,10 +1,10 @@
-# HHJ Decision Intelligence Platform
+# Sbat
 
-An independent platform for evaluating, governing, and evidencing high-impact decisions made by AI agents and autonomous systems.
+Sbat is an independent decision-intelligence platform for evaluating, governing, and evidencing high-impact decisions made by AI agents and autonomous systems.
 
 ## Product boundary
 
-HHJ Decision Intelligence Platform is a decision-assurance system. It evaluates decision proposals against explicit policies, evidence requirements, risk constraints, and provenance rules before producing a structured assessment.
+Sbat is a decision-assurance system. It evaluates decision proposals against explicit policies, evidence requirements, risk constraints, and provenance rules before producing a structured assessment.
 
 It does **not** claim to guarantee truth, eliminate hallucinations, certify legal admissibility, remove liability, or predict business outcomes.
 
@@ -45,7 +45,7 @@ Evidence Record / Replay
 
 ## Status
 
-Foundation release: architecture and deterministic core are being built independently of the HamidCognition Action Gate product.
+Foundation release: Sbat is being built as a standalone product, independent of the HamidCognition Action Gate product.
 
 ## License
 
