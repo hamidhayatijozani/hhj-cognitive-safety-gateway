@@ -1,9 +1,52 @@
-# HHJ Cognitive Safety Gateway
+# HHJ Decision Intelligence Platform
 
-> Historical HHJ-CSG architecture and governance record.
+An independent platform for evaluating, governing, and evidencing high-impact decisions made by AI agents and autonomous systems.
 
-The canonical integrated project is **HamidCognition-Unified**. This repository is retained as a historical source record for the Cognitive Safety Gateway concept.
+## Product boundary
 
-The current product boundary is **HamidCognition Action Gate v1.0.0** in the Unified repository. Historical claims in this repository must be interpreted according to their exact artifact and commit and must not be promoted to current product capabilities without evidence.
+HHJ Decision Intelligence Platform is a decision-assurance system. It evaluates decision proposals against explicit policies, evidence requirements, risk constraints, and provenance rules before producing a structured assessment.
 
-Project lineage is preserved in `HamidCognition-Unified/MIGRATION/`.
+It does **not** claim to guarantee truth, eliminate hallucinations, certify legal admissibility, remove liability, or predict business outcomes.
+
+## Core flow
+
+```
+Decision Proposal
+      |
+      v
+Evidence Intake
+      |
+      v
+Risk & Policy Evaluation
+      |
+      v
+Decision Assessment
+      |
+      +----> APPROVE
+      +----> REJECT
+      +----> REVIEW
+      +----> SANDBOX
+      +----> DEFER
+      |
+      v
+Evidence Record / Replay
+```
+
+## Initial capabilities
+
+- deterministic decision assessment
+- evidence coverage and provenance tracking
+- explicit risk constraints
+- tamper-evident evidence records
+- replayable assessment records
+- policy version binding
+- machine-readable assurance results
+- clean separation between assessment and execution
+
+## Status
+
+Foundation release: architecture and deterministic core are being built independently of the HamidCognition Action Gate product.
+
+## License
+
+TBD.
