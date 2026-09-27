@@ -1,51 +1,88 @@
 # Sbat
 
-Sbat is an independent decision-intelligence platform for evaluating, governing, and evidencing high-impact decisions made by AI agents and autonomous systems.
+**Sbat** is an evidence-bound decision intelligence platform for evaluating, challenging, governing, and evidencing high-impact decisions made by AI agents and autonomous systems.
 
-## Product boundary
+## What Sbat does
 
-Sbat is a decision-assurance system. It evaluates decision proposals against explicit policies, evidence requirements, risk constraints, and provenance rules before producing a structured assessment.
-
-It does **not** claim to guarantee truth, eliminate hallucinations, certify legal admissibility, remove liability, or predict business outcomes.
-
-## Core flow
+Sbat places an independent assessment boundary around an agent decision:
 
 ```
+Agent / Workflow
+      |
+      v
 Decision Proposal
       |
       v
 Evidence Intake
       |
       v
-Risk & Policy Evaluation
+Policy + Cognitive Risk Evaluation
+      |
+      +--> Red-Team Challenges
+      +--> Multi-Agent Evaluation
       |
       v
 Decision Assessment
       |
-      +----> APPROVE
-      +----> REJECT
-      +----> REVIEW
-      +----> SANDBOX
-      +----> DEFER
+      +--> APPROVE
+      +--> REJECT
+      +--> REVIEW
+      +--> SANDBOX
+      +--> DEFER
       |
       v
-Evidence Record / Replay
+Evidence Ledger
+      |
+      v
+Assurance Report
 ```
 
-## Initial capabilities
+Sbat assesses decisions. It does not execute the proposed action.
 
-- deterministic decision assessment
-- evidence coverage and provenance tracking
-- explicit risk constraints
-- tamper-evident evidence records
-- replayable assessment records
-- policy version binding
-- machine-readable assurance results
-- clean separation between assessment and execution
+## Product capabilities
 
-## Status
+- deterministic policy-bound assessment
+- cognitive risk signal with inspectable factors
+- evidence coverage and reliability checks
+- red-team scenario evaluation
+- multi-agent agreement analysis
+- chained, HMAC-protected evidence ledger
+- replayable machine-readable assessments
+- assurance reports
+- Python service layer, CLI, and HTTP reference API
+- automated tests and GitHub Actions CI
 
-Foundation release: Sbat is being built as a standalone product, independent of the HamidCognition Action Gate product.
+## Trust and claim boundary
+
+Sbat does **not** claim to guarantee truth, eliminate hallucinations, certify legal admissibility, remove liability, perfectly predict risk, or guarantee business outcomes.
+
+Cryptographic records provide integrity evidence within the defined trust boundary. Production legal effect depends on deployment, controls, jurisdiction, and applicable evidence rules.
+
+## Repository structure
+
+- `sbat/` product runtime and SDK surface
+- `tests/` product and API tests
+- `PRODUCT/` product, architecture, API, security and release documentation
+- `pyproject.toml` Python package metadata
+
+## Run
+
+```bash
+python -m unittest discover -s tests -p "test_*.py" -v
+python -m sbat.cli --action "execute_transfer" --impact medium --evidence 2 --reliability .9
+```
+
+Reference API:
+
+```bash
+python -c "from sbat.api import serve; serve()"
+```
+
+Then call `GET /health` or `POST /v1/assess`.
+
+## Product status
+
+Sbat 1.0.0 is a functional reference product and commercial pilot foundation. Customer production deployment still requires deployment-specific security, persistence, authentication, tenant isolation, observability, performance validation, and contractual controls.
 
 ## License
 
