@@ -1,4 +1,4 @@
-name: HHJ Decision Intelligence Tests
+name: Sbat Tests
 on:
   push:
     branches: ["main","feature/**"]
